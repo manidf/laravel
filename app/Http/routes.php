@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Route::get('customer', fucntion () {
+//	$customer = App\Customer::find(1);
+//	echo '<pre>';
+//	print_r($customer);
+//});
 
 Route::get('hello/{name}', function ($name) {
     echo 'Hello There ' . $name;
@@ -29,7 +34,7 @@ Route::post('test', function () {
 Route::get('test', function () {
     echo '<form method="POST" action="test">';
     echo '<input type="submit">';
-    echo '<input type="hidden" value="PUT" name="_method">';
+    echo '<input type="hidden" value="DELETE" name="_method">';
     echo '</form>';
 });
 
