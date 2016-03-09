@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('customer', function() {
+    $customer = App\Customer::find(1);
+    echo '<pre>';
+    print_r($customer);
+});
+
 //Route::get('customer', fucntion () {
 //	$customer = App\Customer::find(1);
 //	echo '<pre>';
