@@ -15,43 +15,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('customer', function() {
-    $customer = App\Customer::find(1);
-    echo '<pre>';
-    print_r($customer);
+Route::get('customer/{id}', function ($id) {
+    $customer = App\Customer::find($id);
+    echo $customer->name;
 });
 
-//Route::get('customer', fucntion () {
-//	$customer = App\Customer::find(1);
-//	echo '<pre>';
-//	print_r($customer);
-//});
-
-Route::get('hello/{name}', function ($name) {
-    echo 'Hello There ' . $name;
+Route::get('patron', function() {
+    $patron = App\Patrons::find();
+    echo $patron->name;
 });
 
-// Create an item
-Route::post('test', function () {
-    echo 'POST';
+Route::get('customer_name', function() {
+    $customer = App\Customer::where('name', '=', 'Mannuel')->first();
+    echo $customer->id;
 });
 
-// Read an item
-Route::get('test', function () {
-    echo '<form method="POST" action="test">';
-    echo '<input type="submit">';
-    echo '<input type="hidden" value="DELETE" name="_method">';
-    echo '</form>';
-});
-
-// Update an item
-Route::put('test', function () {
-    echo 'PUT';
-});
-
-// delete an item
-Route::delete('test', function () {
-    echo 'DELETE';
+Route::get('orders', function() {
+   $orders = App\Orders::all();
+    foreach($orders as $order) {
+        echo $order->name . "<br />";
+    }
 });
 
 /*
