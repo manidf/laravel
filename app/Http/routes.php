@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('php', function ($name) {
+   return view('php');
+});
+
 Route::get('customer/{id}', function ($id) {
     $customer = App\Customer::find($id);
     echo $customer->name;
@@ -51,3 +55,12 @@ Route::get('orders', function() {
 Route::group(['middleware' => ['web']], function () {
     //
 });
+
+
+/*
+ * Routes
+ */
+Route::post(); // create an item
+Route::get();  // Read an item
+Route::put();  // Update an item
+Route::delete(); // delete an item
