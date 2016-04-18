@@ -1,0 +1,12 @@
+{
+    "sloppy": true,
+    "white": true,
+    "vars": true,
+    "browser": true,
+    "predef": [
+        "$",
+        "Mustache",
+        "google",
+        "dd"
+    ]
+}

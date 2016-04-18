@@ -1,0 +1,70 @@
+scss_files: 'assets/scss/**/*.scss'
+
+linters:
+
+  BorderZero:
+    enabled: true
+    convention: none
+
+  BemDepth:
+    enabled: true
+
+  DeclarationOrder:
+    enabled: false
+
+  Indentation:
+    enabled: true
+    character: tab
+    width: 1
+
+  LeadingZero:
+    enabled: false
+
+  NestingDepth:
+    enabled: true
+    max_depth: 3
+    ignore_parent_selectors: false
+
+  PropertySortOrder:
+    enabled: false
+
+  QualifyingElement:
+    enabled: false
+
+  SelectorFormat:
+    enabled: true
+    convention: hyphenated_BEM
+
+  SingleLinePerProperty:
+    enabled: true
+    allow_single_line_rule_sets: false
+
+  StringQuotes:
+    enabled: true
+    style: double_quotes
+
+  SingleLinePerSelector:
+    enabled: true
+
+  SpaceAroundOperator:
+    enabled: true
+    style: one_space
+
+  SpaceAfterVariableName:
+    enbaled: false
+
+  SpaceAfterPropertyColon:
+    enabled: true
+
+  SpaceAfterPropertyName:
+    enabled: false
+
+  SpaceBeforeBrace:
+    enabled: true
+    style: space
+
+  SpaceBetweenParens:
+    enbaled: true
+
+  TrailingSemicolon:
+    enabled: true

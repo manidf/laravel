@@ -15,10 +15,38 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('php', function ($name) {
-   return view('php');
+Route::get('php/{name}', function ($name) {
+    echo 'Hello There ' . $name;
 });
 
+Route::post('test', function () {
+	echo 'POST';
+});
+
+Route::get('test', function() {
+	echo '<form method="POST" action="test">';
+	echo '<input type="submit" value="submit">';
+	echo '<input type="hidden" value="DELETE" name="_method">';
+	echo '</form>';
+});
+
+Route::put('test', function () {
+	echo 'PUT';
+});
+
+Route::delete('test', function () {
+	echo 'DELETE';
+});
+
+/*
+ * Routes
+ * Route::post(); // create an item
+ * Route::get();  // Read an item
+ * Route::put();  // Update an item
+ * Route::delete(); // delete an item
+*/
+
+/*
 Route::get('customer/{id}', function ($id) {
     $customer = App\Customer::find($id);
     echo $customer->name;
@@ -40,6 +68,7 @@ Route::get('orders', function() {
         echo $order->name . "<br />";
     }
 });
+*/
 
 /*
 |--------------------------------------------------------------------------
@@ -55,12 +84,3 @@ Route::get('orders', function() {
 Route::group(['middleware' => ['web']], function () {
     //
 });
-
-
-/*
- * Routes
- */
-Route::post(); // create an item
-Route::get();  // Read an item
-Route::put();  // Update an item
-Route::delete(); // delete an item
