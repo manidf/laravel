@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('strings', function() {
+	return view('strings');
+});
+
+Route::get('string_functions', function() {
+	return view('string_functions');
+});
+
 Route::get('php/{name}', function ($name) {
     echo 'Hello There ' . $name;
 });
