@@ -11,41 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('strings', function() {
-	return view('strings');
-});
-
-Route::get('string_functions', function() {
-	return view('string_functions');
-});
-
-Route::get('php/{name}', function ($name) {
-    echo 'Hello There ' . $name;
-});
-
-Route::post('test', function () {
-	echo 'POST';
-});
-
-Route::get('test', function() {
-	echo '<form method="POST" action="test">';
-	echo '<input type="submit" value="submit">';
-	echo '<input type="hidden" value="DELETE" name="_method">';
-	echo '</form>';
-});
-
-Route::put('test', function () {
-	echo 'PUT';
-});
-
-Route::delete('test', function () {
-	echo 'DELETE';
-});
-
+Route::get('/', 'PagesController@home');
+Route::get('about', 'PagesController@about');
 /*
  * Routes
  * Route::post(); // create an item
