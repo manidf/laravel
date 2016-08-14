@@ -1,7 +1,5 @@
 @extends('layout')
 
 @section('content')
-    <h1>All Cards</h1>
-@endsection
-
+  <h1>All cards</h1>
 @stop

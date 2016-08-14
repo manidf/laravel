@@ -2,63 +2,19 @@
 
 /*
 |--------------------------------------------------------------------------
-| Routes File
+| Application Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you will register all of the routes in an application.
+| Here is where you can register all of the routes for an application.
 | It's a breeze. Simply tell Laravel the URIs it should respond to
 | and give it the controller to call when that URI is requested.
 |
 */
 
-Route::get('/', 'PagesController@home');
-Route::get('about', 'PagesController@about');
-
-Route::get('cards', 'CardsController@cards');
-
-/*
- * Routes
- * Route::post(); // create an item
- * Route::get();  // Read an item
- * Route::put();  // Update an item
- * Route::delete(); // delete an item
-*/
-
-/*
-Route::get('customer/{id}', function ($id) {
-    $customer = App\Customer::find($id);
-    echo $customer->name;
+Route::get('/', function () {
+    return view('welcome');
 });
 
-Route::get('patron', function() {
-    $patron = App\Patrons::find();
-    echo $patron->name;
-});
-
-Route::get('customer_name', function() {
-    $customer = App\Customer::where('name', '=', 'Mannuel')->first();
-    echo $customer->id;
-});
-
-Route::get('orders', function() {
-   $orders = App\Orders::all();
-    foreach($orders as $order) {
-        echo $order->name . "<br />";
-    }
-});
-*/
-
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| This route group applies the "web" middleware group to every route
-| it contains. The "web" middleware group is defined in your HTTP
-| kernel and includes session state, CSRF protection, and more.
-|
-*/
-
-Route::group(['middleware' => ['web']], function () {
-    //
+Route::get('cards', function () {
+  return view('cards.index');
 });
